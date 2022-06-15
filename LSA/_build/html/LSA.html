@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Topik Modeling Dengan Python &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Topik Modeling Dengan Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/LSA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FLSA.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/LSA.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Topik Modeling Dengan Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-data">
+   Preprocessing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stop-word">
+     1. Stop Word
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleaning-data">
+     2. Cleaning Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-lsa">
+   Modeling (LSA)
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Topik Modeling Dengan Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Topik Modeling Dengan Python
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crawling-data">
+   Crawling Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preprocessing-data">
+   Preprocessing Data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stop-word">
+     1. Stop Word
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cleaning-data">
+     2. Cleaning Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-lsa">
+   Modeling (LSA)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="topik-modeling-dengan-python">
+<h1>Topik Modeling Dengan Python<a class="headerlink" href="#topik-modeling-dengan-python" title="Permalink to this headline">#</a></h1>
+<p>topic modeling merupakan suatu pendekatan untuk menganalisis kumpulan dokumen berbentuk teks dan mengelompokkan menjadi beberapa topik. Pendekatan tersebut masuk dalam pendekatan Clustering dalam studi Machine Learning. Adapun tahap-tahapnya yaitu :</p>
+<ol>
+    <li>Crawling Data</li>
+    <li>Preprocessing Data</li>
+    <li>LSA</li>
+</ol></section>
+<section class="tex2jax_ignore mathjax_ignore" id="crawling-data">
+<h1>Crawling Data<a class="headerlink" href="#crawling-data" title="Permalink to this headline">#</a></h1>
+<p>Crawling data adalah suatu teknik untuk mengumpulkan data secara cepat dengan menggunakan url sebagai target data yang akan dikumpulkan. Untuk mengumpulkan data bisa menggunakan berbagai tools atau library yang ada, salah satunya adalah Scrappy. Scrapy adalah framework dari python yang berspesialis dalam melakukan web scraping dalam sekala besar, untuk menggunakan scrapy pertama kita install dahulu Scrapy dengan menggunakan pip</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">Scrapy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Scrapy in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (2.6.1)
+Requirement already satisfied: parsel&gt;=1.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.0)
+Requirement already satisfied: setuptools in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (58.1.0)
+Requirement already satisfied: PyDispatcher&gt;=2.0.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (2.0.5)
+Requirement already satisfied: itemloaders&gt;=1.0.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.0.4)
+Requirement already satisfied: pyOpenSSL&gt;=16.2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.0.0)
+Requirement already satisfied: zope.interface&gt;=4.1.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (5.4.0)
+Requirement already satisfied: Twisted&gt;=17.9.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (22.2.0)
+Requirement already satisfied: cryptography&gt;=2.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (36.0.1)
+Requirement already satisfied: protego&gt;=0.1.15 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.2.1)
+Requirement already satisfied: w3lib&gt;=1.17.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.22.0)
+Requirement already satisfied: tldextract in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (3.2.0)
+Requirement already satisfied: service-identity&gt;=16.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (21.1.0)
+Requirement already satisfied: queuelib&gt;=1.4.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.6.2)
+Requirement already satisfied: cssselect&gt;=0.9.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (1.1.0)
+Requirement already satisfied: itemadapter&gt;=0.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (0.4.0)
+Requirement already satisfied: lxml&gt;=3.5.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Scrapy) (4.8.0)
+Requirement already satisfied: cffi&gt;=1.12 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cryptography&gt;=2.0-&gt;Scrapy) (1.15.0)
+Requirement already satisfied: jmespath&gt;=0.9.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from itemloaders&gt;=1.0.1-&gt;Scrapy) (0.10.0)
+Requirement already satisfied: six&gt;=1.6.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from parsel&gt;=1.5.0-&gt;Scrapy) (1.16.0)
+Requirement already satisfied: pyasn1-modules in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.2.8)
+Requirement already satisfied: pyasn1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (0.4.8)
+Requirement already satisfied: attrs&gt;=19.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from service-identity&gt;=16.0.0-&gt;Scrapy) (21.4.0)
+Requirement already satisfied: typing-extensions&gt;=3.6.5 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (4.1.1)
+Requirement already satisfied: twisted-iocpsupport&lt;2,&gt;=1.0.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (1.0.2)
+Requirement already satisfied: constantly&gt;=15.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (15.1.0)
+Requirement already satisfied: incremental&gt;=21.3.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.3.0)
+Requirement already satisfied: Automat&gt;=0.8.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (20.2.0)
+Requirement already satisfied: hyperlink&gt;=17.1.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from Twisted&gt;=17.9.0-&gt;Scrapy) (21.0.0)
+Requirement already satisfied: requests-file&gt;=1.4 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (1.5.1)
+Requirement already satisfied: filelock&gt;=3.0.8 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.6.0)
+Requirement already satisfied: idna in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (3.3)
+Requirement already satisfied: requests&gt;=2.1.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from tldextract-&gt;Scrapy) (2.27.1)
+Requirement already satisfied: pycparser in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from cffi&gt;=1.12-&gt;cryptography&gt;=2.0-&gt;Scrapy) (2.21)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (2021.10.8)
+Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (2.0.12)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from requests&gt;=2.1.0-&gt;tldextract-&gt;Scrapy) (1.26.8)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah menginstall Scrapy, selanjutnya import library yang dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scrapy</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">re</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah import library yang dibutuhkan, selanjutnya melakukan tahap scraping. Disini tahap Scrape saya simpan di class QuotesSpider dengan parameter scrapy.spider. Variabel start_urls berfungsi untuk menampung target url, dimana start_url akan mendapatkan data dari tahap looping “for page in range(1,10)”. Function parse memiliki peran melakukan scrap pada element html mana, sedangkan function parse_detail memiliki peran untuk menargetkan secara spesifik seperti :</p>
+<ul>
+    <li>Mengambil text htmlnya atau mengambil Linknya</li>
+    <li>Membuang elemen yang tidak digunakan</li>
+    <li>Mereplace kata yang tidak digunakan dengan kata yang ingin digunakan</li>
+</ul><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuotesSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="o">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;quotes&quot;</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://pta.trunojoyo.ac.id/welcome/index/&#39;</span>
+        <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">start_urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">page</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">detail</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;a.gray.button::attr(href)&#39;</span><span class="p">):</span> 
+            <span class="k">yield</span> <span class="n">response</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="n">detail</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">callback</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_detail</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">parse_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;#content_journal &gt; ul &gt; li&#39;</span><span class="p">):</span>
+            <span class="k">yield</span><span class="p">{</span>
+                <span class="s1">&#39;Judul&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(2) &gt; a::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span>
+                <span class="s1">&#39;Penulis&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(2) &gt; span::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Penulis : &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;Dospem 1&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(3) &gt; span::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing I : &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;Dospem 2&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(4) &gt; span::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Dosen Pembimbing II :&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;Abstraksi&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(2) &gt; p::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">|</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ABSTRAK&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;Abstraction&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(4) &gt; p::text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">|</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ABSTRACT&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+                <span class="s1">&#39;Link Download&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">css</span><span class="p">(</span><span class="s1">&#39;div:nth-child(5) &gt; a:nth-child(1)::attr(href)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.pdf-0.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.pdf&#39;</span><span class="p">),</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Silahkan save codenya dan buka cmd, pastikan terbuka di folder yang ada file scrapingnya. Kemudian jalankan perintah ini di cmd untuk memproses dan menyimpan ke csv “scrapy runspider <a class="reference external" href="http://namaFile.py">namaFile.py</a> -o namaFileKetikaDiSaveUlang.csv”</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preprocessing-data">
+<h1>Preprocessing Data<a class="headerlink" href="#preprocessing-data" title="Permalink to this headline">#</a></h1>
+<p>Preprocessing Data adalah suatu teknik untuk merubah data mentah atau raw data menajdi informasi yang bersih dan agar bisa digunakan untuk pengolahan lanjutan pada data mining. Pada pembahasan ini Preprocessing Data akan dilakukan dalam 2 tahap, yaitu :</p>
+<ol>
+    <li>Stop Word</li>
+    <li>Cleaning Data</li>
+</ol><section id="stop-word">
+<h2>1. Stop Word<a class="headerlink" href="#stop-word" title="Permalink to this headline">#</a></h2>
+<p>Stop Word adalah tahap untuk menghilangkan kata yang tidak memiliki arti, seperti preposisi, konjungsi, dan lain sebagainya. Contoh kata yang dihilangkan dari Stop Word adalah yang, di, ke, dan lainnya. Tanpa perlu berlama-lama mari langsung kepada tahap kodingnya, Karena disini saya menggunakan nltk untuk melakukan Stop Word maka kita perlu menginstall nltk terlebih dahulu</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">-</span><span class="n">U</span> <span class="n">nltk</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nltk in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (3.7)Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: tqdm in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (4.63.0)
+Requirement already satisfied: joblib in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (1.1.0)
+Requirement already satisfied: regex&gt;=2021.8.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (2022.3.15)
+Requirement already satisfied: click in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from nltk) (8.0.4)
+Requirement already satisfied: colorama in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from click-&gt;nltk) (0.4.4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dan tidak lupa untuk menginstall pandas juga untuk membantu kita dalam mengolah file</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah menginstall semua yang dibutuhkan, selanjutnya kita import library yang dibutuhkan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">import</span> <span class="nn">string</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah mengimport yang dibutuhkan, selanjutnya kita load data yang sudah kita crawling tadi. Karena tadi hasil yang saya save dengan nama <strong>crawlingpta.csv</strong> maka pada saat load dengan pandas yang saya tuju adalah file <strong>crawlingpta.csv</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jurnal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;crawlingpta.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah meload data selanjutnya memilih kolom yang ingin di proses, disini saya akan memproses kolom <strong>abstraksi</strong>, dan pada kolom itu juga saya akan menghilangkan angka yang akan mengganggu. Tahap ini juga termasuk dalam bagian Cleaning Data, tahap ini saya lakukan di awal karena kalau udah masuk ke stop word akan susah di proses. Untuk melakukannya saya buat function yang bernama <strong>remove_number</strong> dan di function ini akan mengembalikan nilai berupa text dimana jika ada angka akan dihapus, dan ketika memanggil kolom dikasih apply dan memanggil functionnya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">pre_abstrak</span> <span class="o">=</span> <span class="n">jurnal</span><span class="p">[</span><span class="s1">&#39;Abstraksi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+<span class="n">pre_abstrak</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Mayarakat relawan Indonesia (MRI) Surabaya ter...
+1      Identifikasi atribut pejalan kaki merupakan sa...
+2      Skripsi ini bertujuan untuk menganalisis penti...
+3      \n\nTujuan utama dari penelitian ini adalah un...
+4      Penelitian ini bertujuan untuk dapat mengetahu...
+                             ...                        
+847    Penelitian ini bertujuan untuk mengetahui peng...
+848    Tujuan penelitian ini adalah untuk mengetahui ...
+849     \nJenis penelitian ini merupakan penelitian e...
+850    Ach. Fatahillah, NIM  Program Studi Sosiologi,...
+851    \nBayu Krisnatama, “Analisis Pendapatan dan Da...
+Name: Abstraksi, Length: 852, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Kemudian langkah sebelum memasuki stop word adalah harus tokenize kalimat dahulu, tokenize adalah proses untuk membagi kalimat ke dalam bagian bagian tertentu</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word_tokens</span> <span class="o">=</span> <span class="n">pre_abstrak</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+<span class="n">word_tokens</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      [Mayarakat, relawan, Indonesia, (, MRI, ), Sur...
+1      [Identifikasi, atribut, pejalan, kaki, merupak...
+2      [Skripsi, ini, bertujuan, untuk, menganalisis,...
+3      [Tujuan, utama, dari, penelitian, ini, adalah,...
+4      [Penelitian, ini, bertujuan, untuk, dapat, men...
+                             ...                        
+847    [Penelitian, ini, bertujuan, untuk, mengetahui...
+848    [Tujuan, penelitian, ini, adalah, untuk, menge...
+849    [Jenis, penelitian, ini, merupakan, penelitian...
+850    [Ach, ., Fatahillah, ,, NIM, Program, Studi, S...
+851    [Bayu, Krisnatama, ,, “, Analisis, Pendapatan,...
+Name: Abstraksi, Length: 852, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Langkah selanjutnya adalah Stop Word. Karena disini saya menggunakan nltk maka harus menentukan dahulu bahasa yang digunakan untuk menentukan bahasa menggunakan <strong>stopwords.words(‘indonesian’)</strong>. Kemudian jika dirasa list stop word masih ada yang kurang maka kita bisa menambahkan sendiri dengan cara membuat list kata yang tidak ada di stop word kemudian kita extend dengan list yang kita buat sendiri <strong>stop_words.extend(list)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stop_w</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+    <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;aajaran&#39;</span><span class="p">,</span><span class="s1">&#39;aanslag&#39;</span><span class="p">,</span><span class="s1">&#39;aatau&#39;</span><span class="p">,</span><span class="s1">&#39;ah&#39;</span><span class="p">,</span><span class="s1">&#39;abstak&#39;</span><span class="p">,</span><span class="s1">&#39;abstrack&#39;</span><span class="p">,</span><span class="s1">&#39;abstract&#39;</span><span class="p">,</span><span class="s1">&#39;abstrak&#39;</span><span class="p">,</span><span class="s1">&#39;z&#39;</span><span class="p">]</span>
+    <span class="n">stop_words</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">removed</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+    <span class="n">cleaned_text</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">removed</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cleaned_text</span>
+
+<span class="n">after</span> <span class="o">=</span> <span class="n">word_tokens</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stop_w</span><span class="p">)</span>
+<span class="n">after</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Mayarakat relawan Indonesia ( MRI ) Surabaya t...
+1      Identifikasi atribut pejalan kaki salah peneli...
+2      Skripsi bertujuan menganalisis Stagnansi hubun...
+3      Tujuan utama penelitian fotografi komunikasi p...
+4      Penelitian bertujuan pengaruh motivasi kerja m...
+                             ...                        
+847    Penelitian bertujuan pengaruh faktor internal ...
+848    Tujuan penelitian siasat strategi bertahan hid...
+849    Jenis penelitian penelitian eksplantif pendeka...
+850    Ach . Fatahillah , NIM Program Studi Sosiologi...
+851    Bayu Krisnatama , “ Analisis Pendapatan Dampak...
+Name: Abstraksi, Length: 852, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Untuk logika pada saat stop word sendiri sebagai berikut. Pertama membuat fungsi untuk di apply dengan variabel yang menyimpan tokens tadi. Kemudian pada fungsinya kita set bahasa stop words yang digunakan yaitu <strong>indonesian</strong>. Jika ada list stop words yang tidak ada pada stop words yang disediakan oleh nltk, kita bisa menambahkannya dengan cara membuat list kata yang mau dihilangkan kemudian pada stop wordsnya di extend dengan list yang menyimpan list kata yang ingin dihapus. Kemudian logika untuk perulangannya yaitu ini akan dilooping pada array dengan perulangan pada parameter fungsi dan dikasih logika percabangan jika katanya tidak ada pada list stop wordsnya maka akan masuk. Dan untuk mengembalikan agar menyatu jadi kalimat dengan cara set string kosongan kemudian join dengan variabe yang menyimpan list tadi dan terakhir di return</p>
+</section>
+<section id="cleaning-data">
+<h2>2. Cleaning Data<a class="headerlink" href="#cleaning-data" title="Permalink to this headline">#</a></h2>
+<p>Cleaning Data adalah proses untuk membersihkan data yang ada menjadi data yang bisa diolah. Data yang dibersihkan seperti missing value atau data kosong, karakter asing, menghilangkan angka, dan lain sebaginaya. Untuk proses penghilangan angka sudah dilakukan ketika memilih tabel <strong>abstraksi</strong>, maka sekarang tinggal menghilangkan karakter asing dan sekawannya. Untuk melakukan itu kita bisa menggunakan library string.punctuation. Dimana ia akan menghilangkan karakter asing yang ada</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cleaning_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">removed</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="n">d</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">]</span>
+    <span class="n">cleaned_text</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">removed</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cleaned_text</span>
+
+<span class="n">clearData</span> <span class="o">=</span> <span class="n">word_tokens</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleaning_data</span><span class="p">)</span>
+<span class="n">clearData</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      Mayarakat relawan Indonesia MRI Surabaya terbe...
+1      Identifikasi atribut pejalan kaki merupakan sa...
+2      Skripsi ini bertujuan untuk menganalisis penti...
+3      Tujuan utama dari penelitian ini adalah untuk ...
+4      Penelitian ini bertujuan untuk dapat mengetahu...
+                             ...                        
+847    Penelitian ini bertujuan untuk mengetahui peng...
+848    Tujuan penelitian ini adalah untuk mengetahui ...
+849    Jenis penelitian ini merupakan penelitian eksp...
+850    Ach Fatahillah NIM Program Studi Sosiologi Jur...
+851    Bayu Krisnatama “ Analisis Pendapatan dan Damp...
+Name: Abstraksi, Length: 852, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Logika dari code diatas sama seperti proses stop words dimana membuat function dahulu kemudian di apply pada variabel yang menyimpan data sebelumnya. Pada fungsinya melakukan perulangan di dalam array dimana jika kata tidak ada dalam string.punctuation maka akan masuk. Kemudian untuk di joinkan kembali dalam kalimat dengan cara string kosong kemudian di joinkan dan yang terakhr di return</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modeling-lsa">
+<h1>Modeling (LSA)<a class="headerlink" href="#modeling-lsa" title="Permalink to this headline">#</a></h1>
+<p>LSA merupakan metode yang memanfaatkan model statistik matematis untuk menganalisa struktur semantik suatu teks. LSA bisa digunakan untuk menilai esai dengan mengkonversikan esai menjadi matriks-matriks yang diberi nilai pada masing-masing term untuk dicari kesamaan dengan term referensi. Sebelum masuk ke materi LSA mari kita cari tf idfnya, untuk mencari tf-idf kita bisa menggunakan bantuan dari sklearn. Berikut cara menginstall sklearn</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scikit-learn in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (1.1.1)Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the &#39;C:\Users\ASUS A456UR\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip&#39; command.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.17.3 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.22.3)
+Requirement already satisfied: joblib&gt;=1.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.1.0)
+Requirement already satisfied: scipy&gt;=1.3.2 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (1.8.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\asus a456ur\appdata\local\programs\python\python310\lib\site-packages (from scikit-learn) (3.1.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah install selanjutnya import <strong>TfidfVectorizer</strong> yang berada di <strong>sklearn.feature_extraction.text</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>untuk menggunakan <strong>TfidfVectorizer</strong> tinggal memanggilnya saja kemudian untuk parameternya bisa kita set mau max featuresnya berapa. Sesudah memanggil <strong>TfidfVectorizer</strong> selanjutnya kita fit_transform dengan parameter data yang sudah di preprocessing tadi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vect</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">vect_text</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">clearData</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vect_text</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(852, 1000)
+  (0, 422)	0.015911308179129273
+  (0, 333)	0.01583399541833317
+  (0, 461)	0.03208494300892695
+  (0, 183)	0.051860665817638575
+  (0, 932)	0.07480148732114233
+  (0, 821)	0.09310301216969677
+  (0, 40)	0.0507994709591914
+  (0, 198)	0.04498288247752366
+  (0, 149)	0.05014006457800768
+  (0, 862)	0.04184794827559271
+  (0, 34)	0.03467927438215133
+  (0, 835)	0.03948958164468449
+  (0, 788)	0.030132101607632668
+  (0, 731)	0.0425163921134138
+  (0, 913)	0.024501451855423295
+  (0, 248)	0.028612928766161904
+  (0, 398)	0.05386451358203226
+  (0, 802)	0.028181165193795592
+  (0, 836)	0.051496577670779
+  (0, 503)	0.04585439937326079
+  (0, 256)	0.014078459341314877
+  (0, 233)	0.05430805508595041
+  (0, 853)	0.051143044303612425
+  (0, 745)	0.038218009444350755
+  (0, 955)	0.030902634472215428
+  :	:
+  (851, 149)	0.09680527601568607
+  (851, 731)	0.08208627388835532
+  (851, 913)	0.02365244071394395
+  (851, 256)	0.013590620134635597
+  (851, 806)	0.02794402901381703
+  (851, 591)	0.02151220062116037
+  (851, 140)	0.1810037100705794
+  (851, 994)	0.037833281585846375
+  (851, 527)	0.029057944120484427
+  (851, 31)	0.052426201548775635
+  (851, 145)	0.08972542388473194
+  (851, 28)	0.0441890443998219
+  (851, 551)	0.03502050690247188
+  (851, 420)	0.034669691188639024
+  (851, 171)	0.01780602682610239
+  (851, 156)	0.0636627325120539
+  (851, 478)	0.09146915402529479
+  (851, 596)	0.015378690679080112
+  (851, 964)	0.026018583449898453
+  (851, 103)	0.022227933670527705
+  (851, 282)	0.03697327045313454
+  (851, 651)	0.05064751361705093
+  (851, 3)	0.015798533541528638
+  (851, 996)	0.060831942047578004
+  (851, 150)	0.05154914444749496
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sesudah mencari tf selanjutnya mencari idfnya, untuk mencari ifg tinggal memanggil <strong>vect.idf_</strong> dan dimasukan kedalam <strong>dict(zip())</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idf</span><span class="o">=</span><span class="n">vect</span><span class="o">.</span><span class="n">idf_</span>
+<span class="n">dd</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">(),</span> <span class="n">idf</span><span class="p">))</span>
+<span class="n">l</span><span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">dd</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="c1"># print(l)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;dan&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s1">&#39;cumi&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dan cumi
+1.0249271066704706
+7.055612366931734
+</pre></div>
+</div>
+</div>
+</div>
+<p>Berdasarkan data diatas, <strong>dan</strong> merupakan kata yang paling sering muncul dan <strong>cumi</strong> merupakan kata yang jarang muncul. Sesudah mencari tf-idf, selanjutnya kita masuk ke tahap LSAnya. Untuk LSA disiini saya menggunakan bantuan dari modulnya sklearn yaitu <strong>TruncatedSVD</strong>. Pertama tama di import dahulu modulnya dari <strong>sklearn.decomposition</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">TruncatedSVD</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Selanjutnya kita cari topik yang sering di temui</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lsa_model</span> <span class="o">=</span> <span class="n">TruncatedSVD</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;randomized&#39;</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">lsa_top</span><span class="o">=</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">vect_text</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_top</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.32850097 -0.11525273  0.08537634 ...  0.04660467 -0.13699466
+  -0.03435604]
+ [ 0.41426266 -0.0008473   0.03200067 ... -0.11502646 -0.19228477
+  -0.07440796]
+ [ 0.14212964 -0.10789605 -0.16513744 ...  0.15291507 -0.08790457
+   0.03674358]
+ ...
+ [ 0.22259268 -0.06224495  0.13290682 ...  0.01505692  0.0036023
+  -0.02844707]
+ [ 0.22863174 -0.08510094 -0.07263236 ...  0.0778988   0.0147824
+   0.06282196]
+ [ 0.26335842 -0.12435458 -0.01451849 ... -0.01173583  0.08435525
+   0.04894106]]
+(852, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">lsa_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Document 0 :&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot; : &quot;</span><span class="p">,</span><span class="n">topic</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Document 0 :
+Topic  0  :  32.85009737129387
+Topic  1  :  -11.525273206900652
+Topic  2  :  8.537634208779926
+Topic  3  :  7.117440562639198
+Topic  4  :  -5.843891722709371
+Topic  5  :  -10.397668956938892
+Topic  6  :  -2.0812046304894216
+Topic  7  :  4.660467106203514
+Topic  8  :  -13.699465699089517
+Topic  9  :  -3.435603799756027
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10, 1000)
+[[ 0.01641444  0.00562712  0.04901609 ...  0.00970115  0.00819344
+   0.013796  ]
+ [-0.0047456  -0.00224171 -0.03824296 ... -0.00585516 -0.01148761
+  -0.01600021]
+ [-0.01278524  0.01032144 -0.02227802 ... -0.01294159 -0.02039049
+  -0.01175068]
+ ...
+ [ 0.00296216  0.01642359 -0.0155569  ...  0.02160859  0.00799122
+  -0.00253614]
+ [-0.01940096 -0.01363804  0.0106873  ... -0.02721054  0.02123619
+   0.02662152]
+ [ 0.00671964  0.01222919 -0.00523988 ... -0.02098981  0.00782383
+  -0.01222619]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setelah melalui proses yang panjang didapatkan sebuah list dari kata-kata yang penting dan memiliki makna dari setiap 10 topic yang ditampilkan. Sederhananya dibawah ini ditampilkan 10 kata dalam setiap topic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vocab</span> <span class="o">=</span> <span class="n">vect</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsa_model</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
+    <span class="n">vocab_comp</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vocab</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+    <span class="n">sorted_words</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">vocab_comp</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="mi">10</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;: &quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">sorted_words</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topic 0: 
+yang dan penelitian dengan ini dalam siswa pembelajaran pada data 
+
+Topic 1: 
+pembelajaran siswa media perangkat pengembangan kelas rata valid model belajar 
+
+Topic 2: 
+kinerja karyawan kerja signifikan berpengaruh variabel terhadap positif sebesar pengaruh 
+
+Topic 3: 
+siswa kemampuan data teknik soal penelitian berpikir kelas kritis konsep 
+
+Topic 4: 
+undang hukum siswa pidana kerja nomor kinerja karyawan pasal kemampuan 
+
+Topic 5: 
+garam jagung siswa produk pada kemampuan air rata kadar kualitas 
+
+Topic 6: 
+the of in this and to study that used is 
+
+Topic 7: 
+garam media undang anak jagung air kadar hukum terhadap madura 
+
+Topic 8: 
+jual beli desa halal wisata islam syariah produk garam siswa 
+
+Topic 9: 
+perangkat pembelajaran garam lkk kerja jagung lembar rpp desa model 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
